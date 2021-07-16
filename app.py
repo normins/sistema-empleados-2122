@@ -20,7 +20,7 @@ mysql.init_app(app) #creamos instancia de mysql
 # Todas las peticiones que lleguen a  /, raíz, la redirigimos a index
 @app.route('/')
 def index():
-    # sql ="INSERT INTO `empleados` (`id`, `nombre`, `correo`, `foto`) VALUES (NULL, 'Roco', 'roco@gmail.com', 'roco.jpg');"
+    sql ="INSERT INTO `empleados` (`id`, `nombre`, `correo`, `foto`) VALUES (NULL, 'Roco', 'roco@gmail.com', 'roco.jpg');"
     sql="SELECT * FROM 'empleados'"
     conn=mysql.connect()
     cursor=conn.cursor()
